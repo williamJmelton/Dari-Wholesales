@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  Josh Melton's Website To Be
+  <span class="example-spacer"></span>
+  <div *ngIf="_fbService._auth.authState | async; let user; else showLogin">
+    <span> Wuddup, {{ user.displayName }}</span>
+    <button mat-icon-button color="secondary" (click)="logOut()">
+      <mat-icon class="md-24" aria-label="Logout">exit_to_app</mat-icon>
+    </button>
+  </div>
+  <ng-template #showLogin>
+    <div>
+      <span>Please, Login</span>
+      <button #showLogin mat-icon-button color="secondary" (click)="logIn()">
+        <mat-icon class="md-24" aria-label="Login">launch</mat-icon>
+      </button>
+    </div>
+  </ng-template>
+  <!-- <span *ngIf="_fbService._auth.authState | async; let user; else showLogin"> Welcome, {{ user.displayName }} </span> -->
+</mat-toolbar>

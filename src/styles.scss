@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/purple-green.css';
+@import './redTheme.scss';
+
+
+body {
+  margin: 10;
+  font-family: Roboto, sans-serif;
+  margin: auto;
+  color: #faebd7
+}
+
+.content {
+  margin: auto;
+  max-width: 85%;
+}
+
+.head {
+  text-align: center;
+}
